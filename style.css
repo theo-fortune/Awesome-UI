@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Next";
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(fonts/Avenir\ Next\ Font.ttf);
+}
+
+:root {
+  --primary-gradient: linear-gradient(
+    102.3deg,
+    #647b64 -4.62%,
+    #66ac66 178.22%
+  );
+  --linear-gradient: linear-gradient(
+    197.92deg,
+    #ef8031 -227.37%,
+    rgba(239, 128, 49, 0.307045) 1.58%,
+    rgba(239, 128, 49, 0) 103.02%
+  );
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #333;
+  --color-track: #aaa;
+  --text-gray: #4f4f4f;
+  --background-blur-top-left: #f3b562;
+  --background-blur-top-right: #d16035;
+  --background-blur-bottom-left: #efdcc6;
+  --background-blur-bottom-right: #627964;
+  --font-family: "Avenir Next";
+  --primary-green: #66ac66;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-green);
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.section-padding {
+  padding: 3rem 7.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-links_logo img {
+  width: 209.75px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar-links_menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links_menu p {
+  margin-right: 48px;
+  color: var(--color-text);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.navbar-links_menu button {
+  background: var(--primary-gradient);
+  color: var(--color-white);
+  padding: 0.6rem 0.94rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.hero-section {
+  display: flex;
+  gap: 9.9rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-section_square-1 {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  left: 253px;
+  top: 141px;
+  background: var(--background-blur-top-left);
+  filter: blur(200px);
+}
+
+.hero-section_square-2 {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  left: 253px;
+  top: 576px;
+  background: var(--background-blur-bottom-left);
+  filter: blur(200px);
+}
+
+.hero-section_square-3 {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  left: 932px;
+  top: 141px;
+
+  background: var(--background-blur-top-right);
+  filter: blur(200px);
+}
+
+.hero-section_square-4 {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  left: 932px;
+  top: 576px;
+  background: var(--background-blur-bottom-right);
+  filter: blur(200px);
+}
+
+.ellipse {
+  background: var(--linear-gradient);
+}
+
+.boxy-container {
+  width: 495px;
+  height: 375px;
+  padding: auto;
+  position: relative;
+}
+
+.boxy-container_ellipse {
+  width: 84px;
+  height: 84px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 11;
+
+  left: 22.57%;
+  right: 71.6%;
+  top: 6.47%;
+  bottom: 91.47%;
+}
+
+.boxy-container h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 116%;
+  color: var(--color-text);
+  margin: 32px 0 24px 0;
+}
+
+.boxy-container p {
+  color: var(--text-gray);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 132%;
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+}
+
+.boxy-container button {
+  border: none;
+  background: linear-gradient(102.3deg, #647b64 -4.62%, #66ac66 178.22%);
+  box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+  border-radius: 2px;
+  padding: 27px 22px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.boxy-container button p {
+  color: var(--color-white);
+  font-size: 14px;
+  margin: auto 4rem auto 0;
+  bottom: 0;
+}
+
+.boxy-container button img {
+  margin: auto 0 auto 4rem;
+}
