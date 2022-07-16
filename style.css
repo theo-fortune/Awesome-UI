@@ -23,11 +23,19 @@
     rgba(239, 128, 49, 0.307045) 1.58%,
     rgba(239, 128, 49, 0) 103.02%
   );
+  --header-gradient: linear-gradient(
+    164.26deg,
+    rgba(239, 128, 49, 0) -335.51%,
+    rgba(239, 128, 49, 0.15) -20.24%,
+    rgba(239, 128, 49, 0) 119.45%
+  );
   --color-white: #fff;
   --color-black: #000;
   --color-text: #333;
   --color-track: #aaa;
+  --color-green: #647b64;
   --text-gray: #4f4f4f;
+  --heading-color: #f3b562;
   --background-blur-top-left: #f3b562;
   --background-blur-top-right: #d16035;
   --background-blur-bottom-left: #efdcc6;
@@ -208,4 +216,129 @@ a {
 
 .boxy-container button img {
   margin: auto 0 auto 4rem;
+}
+
+section.about {
+  padding: 5rem 0;
+}
+
+.about-details {
+  display: flex;
+  gap: 6rem;
+  justify-content: flex-start;
+}
+
+.about-details button {
+  border: none;
+  background: linear-gradient(102.3deg, #647b64 -4.62%, #66ac66 178.22%);
+  box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+  border-radius: 2px;
+  padding: 27px 22px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-top: 40px;
+  margin-left: 140px;
+}
+
+.about-details button p {
+  color: var(--color-white);
+  font-size: 14px;
+  margin: auto 4rem auto 0;
+  bottom: 0;
+}
+
+.about-details button img {
+  margin: auto 0 auto 4rem;
+}
+
+.about-details_topic-header {
+  position: relative;
+  width: 567px;
+  height: 153px;
+  background: var(--header-gradient);
+}
+
+.about-details_topic-header h4 {
+  padding-top: 40px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--heading-color);
+}
+
+.about-details_topic-header h2 {
+  font-weight: 500;
+  font-size: 41px;
+  margin-top: 17px;
+  line-height: 110%;
+  color: var(--color-green);
+}
+
+.about-details_topic-header h2,
+.about-details_topic-header h4 {
+  padding-left: 140px;
+  text-transform: uppercase;
+}
+
+.about-details_topic-info p {
+  padding-left: 140px;
+  margin-top: 40px;
+  line-height: 132%;
+  letter-spacing: 0.04em;
+  color: var(--text-gray);
+}
+
+.about-details_grid {
+  display: grid;
+  grid-template-rows: 9rem 9rem;
+  grid-template-columns: 9rem 9rem;
+  grid-gap: 4rem;
+}
+
+.car-rental,
+.boat-cruise,
+.bus-trip,
+.road-trip {
+  width: 221px;
+  height: 152px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.car-rental div,
+.boat-cruise div,
+.bus-trip div,
+.road-trip div {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  color: var(--color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.19);
+  margin-bottom: 16px;
+}
+
+.car-rental h4,
+.boat-cruise h4,
+.bus-trip h4,
+.road-trip h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 116%;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.car-rental p,
+.boat-cruise p,
+.bus-trip p,
+.road-trip p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 132%;
+  letter-spacing: 0.04em;
 }
