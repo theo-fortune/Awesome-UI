@@ -134,8 +134,8 @@ a {
   height: 257px;
   left: 932px;
   top: 141px;
-
   background: var(--background-blur-top-right);
+  z-index: -1;
   filter: blur(200px);
 }
 
@@ -146,8 +146,17 @@ a {
   left: 932px;
   top: 576px;
   background: var(--background-blur-bottom-right);
+  z-index: -1;
   filter: blur(200px);
 }
+
+/* @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+  .backdrop-blur {
+    background-color: var(--background-blur-top-left);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+  }
+} */
 
 .ellipse {
   background: var(--linear-gradient);
@@ -264,14 +273,14 @@ section.about {
 
 .about-details_topic-header h4 {
   padding-top: 40px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   line-height: 33px;
   color: var(--heading-color);
 }
 
 .about-details_topic-header h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 41px;
   margin-top: 17px;
   line-height: 110%;
@@ -337,6 +346,287 @@ section.about {
 .boat-cruise p,
 .bus-trip p,
 .road-trip p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 132%;
+  letter-spacing: 0.04em;
+}
+
+.contact-us-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.contact-us-heading h4 {
+  color: var(--heading-color);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact-us-heading h2 {
+  color: var(--color-green);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 110%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 56px;
+}
+
+.contact-us-heading_group {
+  width: 100%;
+  height: 385px;
+  display: flex;
+  gap: 40px;
+  padding-left: 140px;
+  position: relative;
+}
+
+.contact-us-heading_group-info1,
+.contact-us-heading_group-info3 {
+  width: 360px;
+  height: 338px;
+  background: linear-gradient(
+      358.27deg,
+      rgba(100, 123, 100, 0.77) -118.86%,
+      rgba(100, 123, 100, 0) 25.62%,
+      rgba(100, 123, 100, 0) 98.53%
+    ),
+    #ffffff;
+  border-radius: 8px;
+}
+
+.contact-us-heading_group-info1 img,
+.contact-us-heading_group-info2 img,
+.contact-us-heading_group-info3 img {
+  margin-top: 78px;
+  margin-left: 50px;
+}
+
+.contact-us-heading_group-info1 h5,
+.contact-us-heading_group-info2 h5,
+.contact-us-heading_group-info3 h5 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+  color: var(--color-text);
+  margin-top: 24px;
+  margin-left: 50px;
+}
+
+.contact-us-heading_group-info2 h5 {
+  color: var(--color-white);
+}
+
+.contact-us-heading_group-info1 p,
+.contact-us-heading_group-info2 p,
+.contact-us-heading_group-info3 p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 132%;
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+  color: var(--text-gray);
+  margin-left: 50px;
+}
+
+.contact-us-heading_group-info2 p {
+  color: var(--color-white);
+}
+
+.contact-us-heading_group-info2 {
+  width: 360px;
+  height: 338px;
+  border-radius: 8px;
+  background: var(--primary-gradient);
+}
+
+.contact-us-heading_group-bgimg {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  z-index: -1;
+  margin-left: 106px;
+}
+
+.contact-us-heading_group-bgimg2 {
+  position: absolute;
+  width: 463px;
+  height: 182px;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(
+    197.92deg,
+    rgba(239, 128, 49, 0) -227.37%,
+    rgba(239, 128, 49, 0.15) 1.58%,
+    rgba(239, 128, 49, 0) 103.02%
+  );
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.contact-us-heading_group-blur {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  left: 253px;
+  bottom: -170px;
+
+  background: #efdcc6;
+  z-index: -2;
+  filter: blur(200px);
+}
+
+.contact-us-heading_group-blur2 {
+  position: absolute;
+  width: 255px;
+  height: 257px;
+  right: 253px;
+  bottom: -170px;
+
+  background: #627964;
+  z-index: -2;
+  filter: blur(200px);
+}
+
+.business {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.business-img img {
+  max-width: 623px;
+}
+
+.business-hero h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.business-hero h2 {
+  font-size: 41px;
+  font-weight: 500;
+  line-height: 110%;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+}
+
+.business-hero p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 132%;
+  letter-spacing: 0.04em;
+  color: var(--text-gray);
+}
+
+.carousel {
+  padding: 3rem 0;
+}
+
+.carousel_heading-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7.5rem;
+}
+
+.carousel-heading h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.carousel-heading h2 {
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--primary-green);
+}
+
+.carousel-button {
+  display: flex;
+  gap: 1rem;
+  width: 27.96;
+  height: 30px;
+}
+
+.carousel-section {
+  display: block;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.rollie {
+  padding-left: 7.5rem;
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.card {
+  width: 360px;
+  height: 419px;
+  background: linear-gradient(
+      358.27deg,
+      rgba(100, 123, 100, 0.77) -118.86%,
+      rgba(100, 123, 100, 0) 25.62%,
+      rgba(100, 123, 100, 0) 98.53%
+    ),
+    #ffffff;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.card p {
+  position: absolute;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 132%;
+  letter-spacing: 0.04em;
+  color: var(--text-gray);
+  bottom: 32px;
+  left: 40px;
+}
+
+.card img {
+  position: absolute;
+  left: 40px;
+  top: 32px;
+}
+
+.card-heading {
+  position: absolute;
+  top: 49px;
+  right: 32px;
+}
+
+.card-heading h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 116%;
+  color: var(--color-text);
+}
+
+.card-heading px {
   font-weight: 400;
   font-size: 13px;
   line-height: 132%;
