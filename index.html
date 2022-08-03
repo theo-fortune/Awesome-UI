@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" sizes="36x26.09" href="./images/au.png" />
+    <link rel="stylesheet" href="glider.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -176,60 +177,90 @@
           </div>
         </div>
       </section>
-      <section class="carousel">
-        <div class="carousel_heading-section">
+      <section class="carousel glider-contain multiple">
+        <div class="workspace">
           <div class="carousel-heading">
             <h4>MOT consectet</h4>
             <h2>amet,consectet Sit quis</h2>
           </div>
           <div class="carousel-button">
-            <img
-              src="images/arrowLef.svg"
-              alt="arrowLef"
-            />
-            <img
-              src="images/arrowRigh.svg"
-              alt="arrowRigh"
-            />
+            <button class="glider-prev">
+              <img src="images/arrowLef.svg" alt="arrowLef" />
+            </button>
+            <button class="glider-next">
+              <img src="images/arrowRigh.svg" alt="arrowRigh" />
+            </button>
           </div>
         </div>
-        <div class="carousel-section">
-          <div class="rollie">
-            <div class="card">
-              <img src="images/rickRoss.png" alt="rickRoss">
-              <div class="card-heading">
-                <h6>CTO May & Baker</h6>
-                <px>Rick Ross</px>
-              </div>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
-            </div>
-            <div class="card">
-              <img src="images/cocoJones.png" alt="cocoJones">
-              <div class="card-heading">
-                <h6>Project Manager</h6>
-                <px>Coco Jones</px>
-              </div>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
-            </div>
-            <div class="card">
-              <img src="images/snppoDogg.png" alt="snppoDogg">
-              <div class="card-heading">
-                <h6>Brand Ambassador</h6>
-                <px>Snoop Dogg</px>
-              </div>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
-            </div>
-            <!-- <div class="card">
-              <img src="images/rickRoss.png" alt="rickRoss">
-              <div class="card-heading">
-                <h6>CTO May & Baker</h6>
-                <px>Rick Ross</px>
-              </div>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“</p>
-            </div> -->
+        <div class="glider rollie">
+          <div class="contents">
+            <img src="images/Rick.png" alt="Rick" />
+          </div>
+          <div class="contents">
+            <img src="images/Coco.png" alt="Coco" />
+          </div>
+          <div class="contents">
+            <img src="images/Snoop.png" alt="Snoop" />
+          </div>
+          <div class="contents">
+            <img src="images/Rick.png" alt="Rick" />
+          </div>
+          <div class="contents">
+            <img src="images/Coco.png" alt="Coco" />
           </div>
         </div>
       </section>
+      <section class="footer">
+        <div class="footer-1">
+          <img src="images/logo-extended.svg" alt="logo-extended">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae nullam aliquet</p>
+          <p>Copyright &copy; 2021 AWESOME.</p>
+          <p>All rights reserved</p>
+          <div class="imgs">
+            <a href="#"><img src="images/instagram.svg" alt="instagram"></a>
+            <a href="#"><img src="images/dribbble.svg" alt="dribbble"></a>
+            <a href="#"><img src="images/twitter.svg" alt="twitter"></a>
+            <a href="#"><img src="images/youtube.svg" alt="youtube"></a>
+            
+          </div>
+        </div>
+        <div class="footer-2">
+          <h5>Company</h5>
+            <a href="#">Lorem Ipsum 1</a>
+            <a href="#">Lorem 2</a>
+            <a href="#">Lorem 3</a>
+            <a href="#">Lorem 4</a>
+            <a href="#">Lorem 5</a>
+        </div>
+        <div class="footer-3">
+          <h5>Support</h5>
+          <a href="#">Lorem Ipsum 6</a>
+          <a href="#">Lorem Ipsum 7</a>
+          <a href="#">Lorem Ipsum 8</a>
+          <a href="#">Lorem Ipsum 9</a>
+          <a href="#">Lorem Ipsum 10</a>
+        </div>
+        <div class="footer-4">
+          <h4>Send Message</h4>
+          <textarea placeholder="Your message here" id="" cols="35" rows="7"></textarea>
+          <button>
+              <p>GET STARTED</p>
+              <img src="images/arrowRight.svg" alt="arrowRight" />
+          </button>
+        </div>
+      </section>
     </div>
+    <script src="glider.min.js"></script>
+    <script>
+      new Glider(document.querySelector(".glider"), {
+        slidesToShow: 3,
+        draggable: true,
+        dots: "#dots",
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next",
+        },
+      });
+    </script>
   </body>
 </html>
