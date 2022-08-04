@@ -296,6 +296,8 @@ section.about {
 
 .about-details_topic-info p {
   padding-left: 140px;
+  width: 258px;
+  height: 52px;
   margin-top: 40px;
   line-height: 132%;
   letter-spacing: 0.04em;
@@ -306,7 +308,6 @@ section.about {
   display: grid;
   grid-template-rows: 9rem 9rem;
   grid-template-columns: 9rem 9rem;
-  /* grid-gap: 7rem; */
   row-gap: 4rem; /*horizontal gap*/
   column-gap: 7rem; /*vertical gap*/
 }
@@ -718,4 +719,158 @@ section.about {
   align-items: center;
   align-content: center;
   color: var(--color-white);
+}
+
+.navbar-links_ham {
+  display: none;
+}
+
+@media only screen and (max-width: 428px) {
+  .navbar-links_logo img {
+    max-width: 138.44px;
+    max-height: 33px;
+  }
+
+  .navbar-links_menu {
+    display: none;
+  }
+
+  .navbar-links_ham {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-links_ham img {
+    width: 32px;
+  }
+
+  .section-padding {
+    padding: 3rem 1.2rem;
+  }
+
+  .boxy-container {
+    width: 245px;
+    height: 192px;
+  }
+
+  .boxy-container h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 116%;
+    margin-bottom: 12px;
+  }
+
+  .boxy-container p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 132%;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .boxy-container button {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    /* width: 175.51px; */
+    height: 36.61px;
+    padding: 13px 15px;
+    position: relative;
+  }
+
+  .boxy-container button p {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 125.5%;
+    letter-spacing: 0.155em;
+    margin-right: 0;
+  }
+
+  .boxy-container button img {
+    margin-left: 0;
+  }
+
+  .hero-section {
+    gap: 0;
+  }
+
+  .hero-section_image img {
+    width: 177.97px;
+    height: 304px;
+  }
+
+  .about-details {
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .about-details_topic-header {
+    width: 400px;
+    height: 68px;
+  }
+
+  .about-details_topic-header h4 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  .about-details_topic-header h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  .about-details_topic-header h2,
+  .about-details_topic-header h4 {
+    padding-left: 32px;
+  }
+
+  .about-details_topic-info p {
+    width: 258px;
+    height: 52px;
+    padding-left: 32px;
+  }
+
+  .about-details button {
+    margin-left: 32px;
+    margin-top: 110px;
+  }
+
+  .about-details_grid {
+    display: grid;
+    margin: 0 auto;
+    grid-template-rows: 9rem 9rem;
+    grid-template-columns: 9rem 9rem;
+    row-gap: 2rem; /*horizontal gap*/
+    column-gap: 4rem; /*vertical gap*/
+  }
+
+  .about-details h4 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 116%;
+  }
+
+  .about-details_grid p {
+    width: 113.46px;
+    height: 27.35px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 132%;
+    letter-spacing: 0.04em;
+  }
+
+  /* .car-rental div,
+  .boat-cruise div,
+  .bus-trip div,
+  .road-trip div {
+    width: 25.33px;
+    height: 25.33px;
+  } */
 }
