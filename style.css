@@ -1011,10 +1011,6 @@ section.about {
     margin: auto 0 auto 3.4rem;
   }
 
-  .carousel-button {
-    /* display: none; */
-  }
-
   .workspace {
     display: flex;
     align-items: center;
@@ -1037,5 +1033,14 @@ section.about {
 
   .rollie {
     padding-left: 2.8rem;
+  }
+  
+  .footer {
+    display: grid;
+    margin: 0 auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
   }
 }
